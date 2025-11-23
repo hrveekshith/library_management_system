@@ -3,6 +3,7 @@ package com.app.library.book.service;
 
 import com.app.library.book.model.Book;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -19,15 +20,15 @@ import org.springframework.stereotype.Service;
 @Service
 public class BookService{
 
-    private List<Book> books;
+    private List<Book> books = new ArrayList<>();
 
     public List<Book> getAllBooks(){
         return books;
     }
 
     public Optional<Book> getBookById(Long id){
-        Optional<Book> Foundbook = books.stream().filter(book -> book.getId().equals(id)).findFirst();
-        return Foundbook;
+        Optional<Book> foundBook = books.stream().filter(book -> book.getId().equals(id)).findFirst();
+        return foundBook;
     }
 
     public void addBook(Book book){

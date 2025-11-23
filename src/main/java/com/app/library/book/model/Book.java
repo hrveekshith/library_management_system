@@ -1,5 +1,6 @@
 package com.app.library.book.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.*;
 
 import java.time.LocalDate;
@@ -15,6 +16,8 @@ public class Book{
     private Long id;
     private String title;
     private  String author;
+
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
     private LocalDate publicationYear;
     private  Long avaliableCopy;
     private String genre;
