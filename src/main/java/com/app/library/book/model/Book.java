@@ -17,7 +17,7 @@ public class Book{
     private String title;
     private  String author;
 
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy")
     private LocalDate publicationYear;
     private  Long avaliableCopy;
     private String genre;
