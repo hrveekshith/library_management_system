@@ -1,9 +1,9 @@
+//Book service
 package com.app.library.book.service;
 
 import com.app.library.book.model.Book;
 
 import java.util.List;
-import java.util.ArrayList;
 import java.util.Optional;
 
 import lombok.AllArgsConstructor;
@@ -45,6 +45,6 @@ public class BookService{
     }
 
     public void deleteBookById(Long id){
-        books.removeIf(book -> book.getId().equals(id))
+        books.removeIf(book -> book.getId().equals(id));
     }
 }
